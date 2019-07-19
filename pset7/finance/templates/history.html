@@ -1,0 +1,31 @@
+
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+<table style="width:100%">
+  <tr>
+    <th>Symbol</th>
+    <th>Shares</th>
+    <th>Price</th>
+    <th>Type</th>
+    <th>Date</th>
+  </tr>
+  
+  {% for transaction in history %}
+    <tr>
+        <td>{{transaction.symbol}}</td>
+        <td>{{transaction.shares}}</td>
+        <td>{{transaction.price}}</td>
+        <td>{{transaction.type}}</td>
+        <td>{{transaction.date}}</td>
+    </tr>
+    
+  {% endfor %}
+ </table> 
+{% endblock %}

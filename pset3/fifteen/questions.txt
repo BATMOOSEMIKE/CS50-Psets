@@ -1,0 +1,4 @@
+0. The program allows for any dimensions between 3 and 9, since DIM_MIN is 3 and DIM_MAX is 9.
+1. The board is defined as a two dimensional array. Basically a grid of integers.
+2. The greet function
+3. init(), draw(), move(), won()

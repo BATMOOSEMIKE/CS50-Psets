@@ -1,0 +1,12 @@
+1.  stdint.h is a header file that provides a set of typedefs, allowing you to to specify integer types with exact widths (in bytes/bits)
+2.  You can fill up a predetermined amount of space in the file
+3.  BYTE is 1 byte, DWORD is 4 bytes, LONG is 4 bytes, WORD is 2 bytes
+4.  The first two bytes must be 0x424d
+5.  bfSize is the size in bytes of the file while biSize is the size of the info header
+6.  If biHeight is negative, it means the bmp file is a top down DIB with the origin at the top left
+7.  biBitCount specifies the color depth
+8.  fopen will return NULL if it can't find the file
+9.  The argument specifies how many elements you want to read. We are always reading one element.
+10. The padding added on to the scanline makes it a multiple of 4, and since 3*3 is 9, the padding required is 3.
+11. fseek will skip the padding
+12. SEEK_CUR is an integer constant which can be used as the whence argument for fseek to tell it that the offset provided is relative to the end of the file.

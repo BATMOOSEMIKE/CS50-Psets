@@ -1,0 +1,12 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is some sort of medical condition
+1.  getrusage() returns the resource usage of a process
+2.  16 members
+3.  If we pass by value, a lot of memory and time will be wasted and will render getrusage's results less accurate
+since copying in the two structures will also take up time and resources.
+4.  After first loading in the text file to be checked as well as the dictionary, the function will start
+iterating through the text creating words by adding symbols and stopping when it reaches a non alphabetical symbol. It then uses
+the check function to see if this word is in the dictionary before continuing to iterate through the text file.
+5.  fgetc gives us more flexibility by reading in each symbol character by character, allowing us to stop the word collection at any symbol
+that isn't a letter. If we used fscanf, it would stop at any white space and we would have commas and other punctuation in the words we collected,
+making the spellchecker inaccurate.
+6. We declared them as const so they can't be modified

@@ -1,0 +1,49 @@
+
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+<table style="width:100%">
+  <tr>
+    <th>Symbol</th>
+    <th>Shares</th>
+    <th>Price</th>
+    <th>Value</th>
+  </tr>
+  
+  {% for stock in stocks %}
+    <tr>
+        <td>{{stock.symbol}}</td>
+        <td>{{stock.shares}}</td>
+        <td>{{stock.price}}</td>
+        <td>{{stock.value}}</td>
+    </tr>
+    
+  {% endfor %}
+  <tr height = 20px>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+    </tr>
+  
+  <tr>
+        <td>Unused cash: </td>
+        <td>{{cash}}</td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr>
+        <td>Grand total: </td>
+        <td>{{total}}</td>
+        <td></td>
+        <td></td>
+    </tr>
+ </table> 
+{% endblock %}
